@@ -1,6 +1,12 @@
 const menuBtn = document.getElementById('menu-btn');
 const menuBar = document.getElementById('menu-bar')
 const closeBtn = document.getElementById('close-menu')
+const slider = document.getElementById('slider')
+const shoppingIcon = document.getElementById('shopping-icon')
+const basket = document.getElementById('shop-basket')
+const incress = document.getElementById('incress');
+const decress = document.getElementById('decrese')
+const number = document.getElementById('number')
 
 
 // show the menu bar 
@@ -16,10 +22,28 @@ closeBtn.addEventListener('click', ()=>{
 })
 
 
+shoppingIcon.addEventListener('click', ()=>{
+    basket.classList.toggle('show')
+})
+
+
+let i = 0;
+decress.addEventListener('click',()=>{
+    i --;
+    number.innerText = i;
+})
+
+incress.addEventListener('click',()=>{
+    i ++;
+     number.innerText =i;
+})
+
+
 
 /*
 
-let images  =[ './../images/product-1.jpg', './../images/product-2.jpg', './../images/product-3.jpg',];
+
+let images  =['img1.jpg', 'img2.jpg','img3.jpg','img4.jpg'];
 let i = 0;
 let time = 2000;
 
@@ -36,6 +60,7 @@ document.slide.src =images[i];
     setTimeout("changeImg()", time)
     }
     window.onload = changeImg();
+
 
 
 

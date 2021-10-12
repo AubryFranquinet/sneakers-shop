@@ -79,7 +79,7 @@
         width: 25%;
     }
     
-    #productThumb {
+    .productThumb {
         height: 6em;
         width: 6em;
         margin: 10px;

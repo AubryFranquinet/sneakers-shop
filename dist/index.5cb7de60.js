@@ -456,7 +456,8 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"6cF5V":[function(require,module,exports) {
 var _slide = require("./slide");
-_slide.hamburger(); /*
+_slide.hamburger();
+_slide.changeImg(); /*
 
 let images  =[ './../images/product-1.jpg', './../images/product-2.jpg', './../images/product-3.jpg',];
 let i = 0;
@@ -523,6 +524,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "hamburger", ()=>hamburger
 );
+parcelHelpers.export(exports, "changeImg", ()=>changeImg
+);
 function hamburger() {
     const menuBtn = document.getElementById('menu-btn');
     const menuBar = document.getElementById('menu-bar');
@@ -537,6 +540,20 @@ function hamburger() {
         menuBar.classList.remove('show');
         document.body.classList.remove('dark');
     });
+}
+function changeImg() {
+    //Grabbing the different elements just for readability
+    let imgs = document.querySelectorAll(".productThumb");
+    let bigImg = document.getElementById("product");
+    for(let i = 0; i < imgs.length; i++){
+        const img = imgs[i];
+        img.addEventListener("click", function(e) {
+            let offset = i + 1;
+            let bigImgPath = "./images/image-product-" + offset + ".jpg";
+            console.log(bigImgPath);
+            bigImg.src = bigImgPath;
+        });
+    }
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"JacNc":[function(require,module,exports) {

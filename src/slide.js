@@ -17,3 +17,24 @@ export function hamburger() {
     })
 
 }
+
+
+export function changeImg() {
+    //Grabbing the different elements just for readability
+    
+    let imgs = document.querySelectorAll(".productThumb");
+    let bigImg = document.getElementById("product")
+
+    for (let i=0; i<imgs.length; i++) {
+        const img = imgs[i]
+        img.addEventListener("click", function (e) {
+            let offset = i+1
+            let bigImgPath = "./images/image-product-"+offset+".jpg"
+            console.log(bigImgPath)
+            bigImg.src = bigImgPath
+           
+        });
+    }
+}
+
+

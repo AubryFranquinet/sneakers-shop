@@ -56,7 +56,7 @@ addToCart.addEventListener('click',()=>{
         priceAndTotal.classList =" priceAndTotal";
     
         const prdPrice = document.createElement('p');
-        prdPrice.innerText = price.textContent + "x" + document.getElementById('qte').value + " $" + document.getElementById('qte').value * netPrice;
+        prdPrice.innerText = price.textContent + "x" + document.getElementById('qte').value + " = $" + document.getElementById('qte').value * netPrice;
 
     
         priceAndTotal.appendChild(prdPrice)
@@ -65,7 +65,7 @@ addToCart.addEventListener('click',()=>{
         firstDiv.appendChild(namePric)
     
         const deletIcon = document.createElement('img');
-        deletIcon.setAttribute('src', './../images/delete.svg')
+        deletIcon.setAttribute('src', './images/delete.svg')
         deletIcon.className="delete-icon"
         deleteItem(deletIcon)
        

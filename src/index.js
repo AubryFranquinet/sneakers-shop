@@ -18,25 +18,38 @@ const ok = document.getElementById('ok')
 
 
 
+function ShowMenu(){
+    hideMenu();
+    // show the menu bar 
+    menuBtn.addEventListener('click',()=>{
+        menuBar.classList.add('show')
+        document.body.classList.add('dark')
+    })
 
-// show the menu bar 
-menuBtn.addEventListener('click',()=>{
-    menuBar.classList.add('show')
-    document.body.classList.add('dark')
-})
 
-// close the menu bar
-closeBtn.addEventListener('click', ()=>{
-    menuBar.classList.remove('show')
-    document.body.classList.remove('dark')
-})
+}
+ShowMenu();
+
+
+function hideMenu(){
+    // close the menu bar
+    closeBtn.addEventListener('click', ()=>{
+        menuBar.classList.remove('show')
+        document.body.classList.remove('dark')
+    })
+
+}
 
 
 shoppingIcon.addEventListener('click', ()=>{
     basket.classList.toggle('show')
 })
 
+// -------------------------------------------
+// Incresse and decrese the the qte of shose
+//--------------------------------------------
 
+function IncreAndDecrse(){
 let i = 0;
 decress.addEventListener('click',()=>{
 if(i>0){
@@ -46,8 +59,6 @@ if(i>0){
 else{
     document.getElementById('qte').value =0;
 }
-
-
 })
 
 incress.addEventListener('click',()=>{
@@ -55,10 +66,15 @@ incress.addEventListener('click',()=>{
     document.getElementById('qte').value =i;
 })
 
+}
+IncreAndDecrse();
 
-
+//---------------------------------------------
+//---------------------------------------------
 
 // add article to shoping basket
+
+
 
 addToCart.addEventListener('click',()=>{
 
@@ -102,10 +118,13 @@ addToCart.addEventListener('click',()=>{
         const deletIcon = document.createElement('img');
         deletIcon.setAttribute('src', './../images/delete.svg')
         deletIcon.className="delete-icon"
-        deletIcon.addEventListener('click', ()=>{
-            deletIcon.parentElement.parentElement.remove();
+        deleteItem(deletIcon)
+       
+       
+        // deletIcon.addEventListener('click', ()=>{
+         //   deletIcon.parentElement.parentElement.remove();
            
-        })
+       // })
         firstDiv.appendChild(deletIcon)
         
         const checkOutBtn = document.createElement('button');
@@ -128,6 +147,11 @@ ok.addEventListener('click',()=>{
 
 
 
+function deleteItem(icon){
+    icon.addEventListener('click', ()=>{
+        icon.parentElement.parentElement.remove();
+    })
+}
 
 
 
@@ -158,6 +182,3 @@ document.slide.src =images[i];
 
 
 */
-
-
-

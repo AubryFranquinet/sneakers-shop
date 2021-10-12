@@ -36,6 +36,7 @@
         font-weight: 700;
         font-size: 50px;
         margin-top: 0;
+        padding: 0;
     }
     
     #productDescription {
@@ -75,13 +76,13 @@
         border-radius: 5%;
         max-width: 100%;
         height: 35%;
-        width: 25%;
+        width: 500px;
     }
     
     .productThumb {
         height: 6em;
         width: 6em;
-        margin: 10px;
+        margin: 8px;
         border-radius: 5%;
     }
     
@@ -94,10 +95,9 @@
     
     #text {
         display: grid;
-        padding-left: 50px;
         box-sizing: border-box;
         margin: 0;
-        padding: 0;
+        padding: 50px;
     }
     /* -----------------------------------
 Header style
@@ -117,7 +117,7 @@ Header style
         margin-top: 1rem;
     }
     
-    h1 {
+    #navbarTitle {
         margin-left: 1rem;
     }
     

@@ -72,7 +72,7 @@
 147C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\@parcel\fs-write-stream-atomic\node_modules\readable-stream\lib\internal\streams\stream.js132784957041181856 0
 106C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\sharp\vendor\8.10.6\include\libheif\heif_plugin.h132612604640000000 0
 72C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\fast-deep-equal132784957039316534 1
-48C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist132785176103993433 1
+48C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist132785189401529341 1
 101C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\http-proxy-middleware\dist\config-factory.js132784957031015091 0
 100C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\cssstyle\lib\properties\borderRightStyle.js132784957050163474 0
 80C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\tar-stream\package.json132784957037036140 0
@@ -197,7 +197,7 @@
 94C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\browserify-rsa\node_modules\bn.js\lib132784957029399813 1
 97C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\core-js\internals\inherit-if-required.js132784957098136797 0
 100C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\caniuse-lite\data\features\css-hyphenate.js132784957071512181 0
-58C:\Users\Aubry\Desktop\BeCode\sneakers-shop\src\index.html132785166660747756 0
+58C:\Users\Aubry\Desktop\BeCode\sneakers-shop\src\index.html132785187836423994 0
 56C:\Users\Aubry\Desktop\BeCode\sneakers-shop\src\index.js132785057516606198 0
 80C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\safe-regex\package.json132784957027559485 0
 87C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\highlight.js\styles\vs2015.css132784957060130205 0
@@ -253,7 +253,7 @@
 79C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\core-js\stage\index.js132784957097981782 0
 73C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\to-regex\LICENSE132784957030384978 0
 91C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\@babel\traverse\scripts\generators132784957050348509 1
-57C:\Users\Aubry\Desktop\BeCode\sneakers-shop\src\style.css132785176102298146 0
+57C:\Users\Aubry\Desktop\BeCode\sneakers-shop\src\style.css132785189400689639 0
 117C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\postcss-modules-values\node_modules\postcss\lib\stringify.js132784957050798585 0
 112C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\postcss-modules\node_modules\postcss\lib\lazy-result.js132784957038916465 0
 85C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\request-promise-core\LICENSE132784957027574493 0
@@ -10789,7 +10789,7 @@
 92C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\elliptic\lib\elliptic\curve\base.js132784957028604670 0
 92C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\jsdom\node_modules\ws\lib\sender.js132784957039141501 0
 95C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\jsdom\node_modules\parse5\package.json132784957027999570 0
-67C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\index.5952072d.css132785176103968424 0
+67C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\index.5952072d.css132785189401499340 0
 95C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\jsdom\node_modules\parse5\lib\index.js132784957042172025 0
 97C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\jsdom\node_modules\parse5\lib\serializer132784957043297215 1
 100C:\Users\Aubry\Desktop\BeCode\sneakers-shop\node_modules\jsdom\node_modules\parse5\lib\tree-adapters132784957048918205 1
@@ -17802,9 +17802,9 @@
 87C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\image-product-4-thumbnail.5dcf3633.jpg132785173505873698 0
 55C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\images132785142699518397 1
 66C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\img1.e1775ed7.jpg132785173505853699 0
-71C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\index.5952072d.css.map132785176103983430 0
+71C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\index.5952072d.css.map132785189401524337 0
 70C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\index.5cb7de60.js.map132785175470996794 0
-59C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\index.html132785173505883717 0
+59C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\index.html132785187837305516 0
 66C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\images\avatar.png132785137813291683 0
 73C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\images\favicon-32x32.png132785137814341865 0
 69C:\Users\Aubry\Desktop\BeCode\sneakers-shop\dist\images\icon-cart.svg132785137813776759 0

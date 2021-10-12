@@ -1,6 +1,9 @@
 import {hamburger} from "./slide";
 hamburger();
 
+import {displayThumb} from "./thumbnail";
+displayThumb();
+
 
 /*
 

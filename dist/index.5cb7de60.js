@@ -456,7 +456,9 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"6cF5V":[function(require,module,exports) {
 var _slide = require("./slide");
-_slide.hamburger(); /*
+var _thumbnail = require("./thumbnail");
+_slide.hamburger();
+_thumbnail.displayThumb(); /*
 
 let images  =[ './../images/product-1.jpg', './../images/product-2.jpg', './../images/product-3.jpg',];
 let i = 0;
@@ -518,7 +520,7 @@ for(let i = 0; i<images.length; i++){
 }
 */ 
 
-},{"./slide":"7BchB"}],"7BchB":[function(require,module,exports) {
+},{"./slide":"7BchB","./thumbnail":"46Yio"}],"7BchB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "hamburger", ()=>hamburger
@@ -571,6 +573,24 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["8Ye98","6cF5V"], "6cF5V", "parcelRequirefc6a")
+},{}],"46Yio":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "displayThumb", ()=>displayThumb
+);
+function displayThumb() {
+    let click = document.querySelectorAll("clicks");
+    click.onclick = function() {
+        let thumb_id = document.getElementById('productThumb');
+        let product_id = document.getElementById('product');
+        if (thumb_id.src.match("./images/image-product-1-thumbnail.jpg")) product_id.src = "./images/image-product-1.jpg";
+        else if (thumb_id.src.match("./images/image-product-2-thumbnail.jpg")) product_id.src = "./images/image-product-2.jpg";
+        else if (thumb_id.src.match("./images/image-product-3-thumbnail.jpg")) product_id.src = "./images/image-product-3.jpg";
+        else if (thumb_id.src.match("./images/image-product-4-thumbnail.jpg")) product_id.src = "./images/image-product-4.jpg";
+        console.log("test passed");
+    };
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}]},["8Ye98","6cF5V"], "6cF5V", "parcelRequirefc6a")
 
 //# sourceMappingURL=index.5cb7de60.js.map

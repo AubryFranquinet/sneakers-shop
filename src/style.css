@@ -36,6 +36,7 @@
         font-weight: 700;
         font-size: 50px;
         margin-top: 0;
+        margin-left: 0%;
     }
     
     #productDescription {
@@ -73,9 +74,10 @@
     #product {
         float: left;
         border-radius: 5%;
-        max-width: 100%;
+        min-width: 30%;
         height: 35%;
         width: 25%;
+        margin-right: 30px;
     }
     
     #productThumb {
@@ -83,6 +85,9 @@
         width: 6em;
         margin: 10px;
         border-radius: 5%;
+        margin-top: 30px; 
+        margin-left: 0%;  
+        margin-right: 20px; 
     }
     
     #thumbnail {

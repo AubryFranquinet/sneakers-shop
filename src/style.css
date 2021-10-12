@@ -16,7 +16,7 @@ body {
 
 main {
     margin-top: 50px;
-    margin-left: 70px;
+    padding-left: 10px;
 }
 
 #slide {
@@ -112,7 +112,7 @@ header{
     width: 100%;
     height: 15vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .header-top{
@@ -133,6 +133,7 @@ h1{
     height: 100%;
     transform: translateX(-100%);
     transition: 1s ease;
+    z-index: 1;
     
 }
 #menu-bar.show{
@@ -161,6 +162,7 @@ body.dark{
     background-color: gray;
 }
 
+
 #close-menu{
     margin-top: 1rem;
     border: none;
@@ -177,28 +179,38 @@ body.dark{
 }
 
 #menu-btn{
-    margin-left:3rem;
     width: 25px;
     height: 25px;
-    position: relative;
-    top: 8px;
+    position: fixed;
+    top: 4rem;
     cursor: pointer;
+    left: 5%;
 }
 
 
-/* Shopping icon and create progile */
-
 #shopping-icon, #account-icon{
     position: relative;
-    left: 25%;
+    left: 20%;
     cursor: pointer;
     width: 30px;
     height: 30px;
 }
-#shopping-icon{
-    margin-right: 20px;
-    position: relative;
+
+#account-icon{
+    left: 1px;
 }
+
+.header-top{
+    position: relative;
+    left: 30%;
+}
+
+
+
+/* ---------------------------------
+ Shopping icon and create progile 
+ -------------------------------*/
+
 #articel-number{
     font-size: .7rem;
     border-radius: 50%;
@@ -234,14 +246,19 @@ body.dark{
 
 #shop-basket{
     position: absolute;
-    width: 300px;
     height: auto;
-    left: 25%;
+    width: 370px;
+    background-image: url('./images/image-product-1.jpg');
+    background-position: center;
+    background-size: cover;
     padding: 10px;
-    border-radius: 5px;
+    right: -3rem;
     border: 1px solid black;
     background-color: white;
     display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 
 #shop-basket.show{
@@ -261,9 +278,147 @@ body.dark{
     left: 2rem;
 }
 
-#decrese, #incress, #number{
+
+
+
+
+
+/*----------------------------------------------------
+Incress and decrese buttons
+-------------------------------------------------------*/
+#decrese, #incress{
     border: none;
     background-color: transparent;
     font-size: 1.7rem;
     cursor: pointer;
 }
+#atc-in-basket{
+    position: relative;
+    width:99%;
+    height: 99%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#basket-title{
+    padding-left: 15px;
+    width: 100%;
+
+}
+hr{
+opacity: 0.1;
+}
+input {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    left: 14px;
+    font-size: 1.3rem;
+    width: 60px;
+    
+}
+
+#basket-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.empty{
+    padding-top: 1rem;
+    font-weight: bold;
+    padding: 20px 0;
+    opacity: 0.4;
+}
+
+.hide{
+    display: none;
+}
+
+.prd-img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 1.5rem;
+}
+
+.firstDiv{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    
+}
+
+.namePrice{
+    width: 98%;
+}
+
+.priceAndTotal{
+    display: flex;
+    position: relative;
+    left: 2rem;
+    top: -2rem;
+}
+.delete-icon{
+    position: relative;
+    top: 2rem;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.check-out-btn{
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-color: #FF7F18;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    opacity: 0.9;
+    opacity: 0.9;
+}
+
+.total{
+    font-weight: bold;
+}
+
+
+
+/*---------------------------- 
+if Qte is egal to null
+------------------------*/
+.qte-null{
+width: 350px;
+height: 200px;
+background-color: white;
+color: black;
+font-size: 1.5rem;
+text-align: center;
+display: grid;
+place-items: center;
+padding: 5px;
+position: absolute;
+left: 1%;
+top: 100%;
+box-shadow: 0 0 10px 5px;
+border-radius: 5px;
+display: none;
+}
+
+.qte-null.on{
+    display: grid;
+}
+
+#ok:hover{
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    transform: scale(1.3);
+}
+

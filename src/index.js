@@ -6,7 +6,17 @@ const shoppingIcon = document.getElementById('shopping-icon')
 const basket = document.getElementById('shop-basket')
 const incress = document.getElementById('incress');
 const decress = document.getElementById('decrese')
-const number = document.getElementById('number')
+const addToCart = document.getElementById('add-to-cart');
+const price = document.getElementById('price')
+let netPrice =document.getElementById('net-price').value;
+const basketBody = document.getElementById('basket-body')
+const empty = document.querySelector('.empty')
+const modelName = document.getElementById('modelName')
+const qteNull = document.getElementById('qte-null');
+const ok = document.getElementById('ok')
+
+
+
 
 
 // show the menu bar 
@@ -29,14 +39,95 @@ shoppingIcon.addEventListener('click', ()=>{
 
 let i = 0;
 decress.addEventListener('click',()=>{
+if(i>0){
     i --;
-    number.innerText = i;
+    document.getElementById('qte').value = i;
+}
+else{
+    document.getElementById('qte').value =0;
+}
+
+
 })
 
 incress.addEventListener('click',()=>{
     i ++;
-     number.innerText =i;
+    document.getElementById('qte').value =i;
 })
+
+
+
+
+// add article to shoping basket
+
+addToCart.addEventListener('click',()=>{
+
+    if(document.getElementById('qte').value ==0){
+        qteNull.classList.add('on')
+    }
+    else{
+        
+        
+        empty.classList.add('hide')
+        
+        const basketDiv = document.createElement('div')
+        const firstDiv = document.createElement('div');
+        firstDiv.className ="firstDiv"
+    
+    
+        const prdImg = document.createElement('img');
+        prdImg.setAttribute('src', './../images/product-1.jpg')
+        prdImg.className ="prd-img"
+        firstDiv.appendChild(prdImg)
+    
+        const namePric = document.createElement('div');
+        namePric.classList.add('namePrice')
+    
+        const mdlName = document.createElement('h4');
+        mdlName.innerText = modelName.textContent;
+        namePric.appendChild(mdlName)
+
+        const priceAndTotal = document.createElement('div')
+        priceAndTotal.classList =" priceAndTotal";
+    
+        const prdPrice = document.createElement('p');
+        prdPrice.innerText = price.textContent + "x" + document.getElementById('qte').value + " $" + document.getElementById('qte').value * netPrice;
+
+    
+        priceAndTotal.appendChild(prdPrice)
+        
+        namePric.appendChild(priceAndTotal)
+        firstDiv.appendChild(namePric)
+    
+        const deletIcon = document.createElement('img');
+        deletIcon.setAttribute('src', './../images/delete.svg')
+        deletIcon.className="delete-icon"
+        deletIcon.addEventListener('click', ()=>{
+            deletIcon.parentElement.parentElement.remove();
+           
+        })
+        firstDiv.appendChild(deletIcon)
+        
+        const checkOutBtn = document.createElement('button');
+        checkOutBtn.innerText ="Checkout"
+        checkOutBtn.classList.add('check-out-btn')
+        
+        
+        basketDiv.appendChild(firstDiv)
+        basketDiv.appendChild(checkOutBtn)
+        basketBody.appendChild(basketDiv)
+    }
+
+
+})
+
+ok.addEventListener('click',()=>{
+    qteNull.classList.remove('on')
+})
+
+
+
+
 
 
 
@@ -66,47 +157,7 @@ document.slide.src =images[i];
 
 
 
-/*
-
-let images = [
-    {
-        name:"one",
-        img: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/jvcf7clhvzyavyopsi9n/revolution-5-running-shoe-7TKVTL.png"
-    },
-    {
-        name:"one",
-        img: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/e125b578-4173-401a-ab13-f066979c8848/air-force-1-older-shoes-xjblV7.png"
-    },
-    {
-        name:"one",
-        img: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fb7eda3c-5ac8-4d05-a18f-1c2c5e82e36e/blazer-mid-77-vintage-shoe-Q6SCp0.png"
-    }
-]
-
-
-
-let myImg =['product-1.png', 'product-2.png', 'product-3.png'];
-let i =0;
-let time = 200;
-
-
-
-
-
-
-
-/*
-for(let i = 0; i<images.length; i++){
-
-    let allimage = document.createElement('img');
-    allimage.setAttribute('src', images[i].img);
-    newmain.appendChild(allimage)
-}
 */
-
-
-
-
 
 
 

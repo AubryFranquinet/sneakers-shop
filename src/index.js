@@ -88,4 +88,3 @@ addToCart.addEventListener('click',()=>{
 
 addArticleInCart();
 removeAlert();
-

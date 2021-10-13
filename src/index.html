@@ -23,7 +23,6 @@
             <li><a href="#" data-filter="women">Women</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            <li></li>
         </ul>
     </header>
     <main>
@@ -44,9 +43,16 @@
                 durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
             <div id="productPrice">
                 <p id="price">$125.00</p>
+                <input id="net-price" value="125"  type="text" style="color: white;">
                 <p id="discount"> 50% </p>
             </div>
-            <strike id="oldPrice">$250.00</strike>
+            <strike id="oldPrice">250</strike>
+        </div>
+
+        <div class="conrtorls">
+            <div class="calc"> <button id="decrese">-</button> <input id="qte" type="text" value="0"><button id="incress">+</button> </div>
+            <button id="add-to-cart"><img src="./../images/icon-cart.svg" alt=""> <span>Add to cart <span></span></button>
+            <p id="qte-null" class="qte-null " >Please choose the quantity of your shoes !  <span id="ok">OK</span></p>
         </div>
 
     </main>

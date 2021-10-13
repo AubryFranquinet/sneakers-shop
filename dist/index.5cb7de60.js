@@ -456,7 +456,46 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"6cF5V":[function(require,module,exports) {
 var _function = require("./function");
-var _slide = require("./slide");
+_function.changeImg();
+_function.ShowMenu();
+_function.IncreAndDecrse();
+_function.addArticleInCart();
+_function.removeAlert();
+_function.onClickShopping();
+_function.addArticleInCart();
+
+},{"./function":"1J74e"}],"1J74e":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+//Show the left side menu
+parcelHelpers.export(exports, "ShowMenu", ()=>ShowMenu
+);
+//Change number of items when +1 and -1 to the product
+parcelHelpers.export(exports, "IncreAndDecrse", ()=>IncreAndDecrse
+);
+// Delete the item added in basket
+parcelHelpers.export(exports, "deleteItem", ()=>deleteItem
+);
+//Remove alert when the quantity of items is less than 0
+parcelHelpers.export(exports, "removeAlert", ()=>removeAlert
+);
+//Show the shopping basket when clicked on
+parcelHelpers.export(exports, "onClickShopping", ()=>onClickShopping
+);
+//Add an article to the shopping basket when clicked on
+parcelHelpers.export(exports, "addArticleInCart", ()=>addArticleInCart
+);
+//Show product images when thumbnail is clicked on
+parcelHelpers.export(exports, "changeImg", ()=>changeImg
+);
+//GLOBAL VARIABLES
+const menuBtn = document.getElementById('menu-btn');
+const menuBar = document.getElementById('menu-bar');
+const closeBtn = document.getElementById('close-menu');
+const incress = document.getElementById('incress');
+const decress = document.getElementById('decrese');
+const qteNull = document.getElementById('qte-null');
+const ok = document.getElementById('ok');
 const shoppingIcon = document.getElementById('shopping-icon');
 const basket = document.getElementById('shop-basket');
 const addToCart = document.getElementById('add-to-cart');
@@ -465,79 +504,6 @@ let netPrice = document.getElementById('net-price').value;
 const basketBody = document.getElementById('basket-body');
 const empty = document.querySelector('.empty');
 const modelName = document.getElementById('modelName');
-const qteNull = document.getElementById('qte-null');
-shoppingIcon.addEventListener('click', ()=>{
-    basket.classList.toggle('show');
-});
-_slide.changeImg();
-_function.ShowMenu();
-_function.IncreAndDecrse();
-// add article to shoping basket
-function addArticleInCart() {
-    addToCart.addEventListener('click', ()=>{
-        if (document.getElementById('qte').value == 0) qteNull.classList.add('on');
-        else {
-            empty.classList.add('hide');
-            const basketDiv = document.createElement('div');
-            const firstDiv = document.createElement('div');
-            firstDiv.className = "firstDiv";
-            const prdImg = document.createElement('img');
-            prdImg.setAttribute('src', './../images/product-1.jpg');
-            prdImg.className = "prd-img";
-            firstDiv.appendChild(prdImg);
-            const namePric = document.createElement('div');
-            namePric.classList.add('namePrice');
-            const mdlName = document.createElement('h4');
-            mdlName.innerText = modelName.textContent;
-            namePric.appendChild(mdlName);
-            const priceAndTotal = document.createElement('div');
-            priceAndTotal.classList = " priceAndTotal";
-            const prdPrice = document.createElement('p');
-            prdPrice.innerText = price.textContent + "x" + document.getElementById('qte').value + " = $" + document.getElementById('qte').value * netPrice;
-            priceAndTotal.appendChild(prdPrice);
-            namePric.appendChild(priceAndTotal);
-            firstDiv.appendChild(namePric);
-            const deletIcon = document.createElement('img');
-            deletIcon.setAttribute('src', './images/delete.svg');
-            deletIcon.className = "delete-icon";
-            _function.deleteItem(deletIcon);
-            firstDiv.appendChild(deletIcon);
-            const checkOutBtn = document.createElement('button');
-            checkOutBtn.innerText = "Checkout";
-            checkOutBtn.classList.add('check-out-btn');
-            basketDiv.appendChild(firstDiv);
-            basketDiv.appendChild(checkOutBtn);
-            basketBody.appendChild(basketDiv);
-        }
-    });
-}
-addArticleInCart();
-_function.removeAlert();
-
-},{"./function":"1J74e","./slide":"7BchB"}],"1J74e":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ShowMenu", ()=>ShowMenu
-);
-// -------------------------------------------
-// Incresse and decrese the the qte of shose
-//--------------------------------------------
-parcelHelpers.export(exports, "IncreAndDecrse", ()=>IncreAndDecrse
-);
-// Delete the item add in basket
-//--------------------------
-parcelHelpers.export(exports, "deleteItem", ()=>deleteItem
-);
-//Remove aler for Zero qtes
-parcelHelpers.export(exports, "removeAlert", ()=>removeAlert
-);
-const menuBtn = document.getElementById('menu-btn');
-const menuBar = document.getElementById('menu-bar');
-const closeBtn = document.getElementById('close-menu');
-const incress = document.getElementById('incress');
-const decress = document.getElementById('decrese');
-const qteNull = document.getElementById('qte-null');
-const ok = document.getElementById('ok');
 function ShowMenu() {
     hideMenu();
     // show the menu bar 
@@ -546,7 +512,7 @@ function ShowMenu() {
         document.body.classList.add('dark');
     });
 }
-ShowMenu();
+//Hide the left side menu
 function hideMenu() {
     // close the menu bar
     closeBtn.addEventListener('click', ()=>{
@@ -576,6 +542,63 @@ function removeAlert() {
     ok.addEventListener('click', ()=>{
         qteNull.classList.remove('on');
     });
+}
+function onClickShopping() {
+    shoppingIcon.addEventListener('click', ()=>{
+        basket.classList.toggle('show');
+    });
+}
+function addArticleInCart() {
+    addToCart.addEventListener('click', ()=>{
+        if (document.getElementById('qte').value == 0) qteNull.classList.add('on');
+        else {
+            empty.classList.add('hide');
+            const basketDiv = document.createElement('div');
+            const firstDiv = document.createElement('div');
+            firstDiv.className = "firstDiv";
+            const prdImg = document.createElement('img');
+            prdImg.setAttribute('src', './../images/product-1.jpg');
+            prdImg.className = "prd-img";
+            firstDiv.appendChild(prdImg);
+            const namePric = document.createElement('div');
+            namePric.classList.add('namePrice');
+            const mdlName = document.createElement('h4');
+            mdlName.innerText = modelName.textContent;
+            namePric.appendChild(mdlName);
+            const priceAndTotal = document.createElement('div');
+            priceAndTotal.classList = " priceAndTotal";
+            const prdPrice = document.createElement('p');
+            prdPrice.innerText = price.textContent + "x" + document.getElementById('qte').value + " = $" + document.getElementById('qte').value * netPrice;
+            priceAndTotal.appendChild(prdPrice);
+            namePric.appendChild(priceAndTotal);
+            firstDiv.appendChild(namePric);
+            const deletIcon = document.createElement('img');
+            deletIcon.setAttribute('src', './images/delete.svg');
+            deletIcon.className = "delete-icon";
+            deleteItem(deletIcon);
+            firstDiv.appendChild(deletIcon);
+            const checkOutBtn = document.createElement('button');
+            checkOutBtn.innerText = "Checkout";
+            checkOutBtn.classList.add('check-out-btn');
+            basketDiv.appendChild(firstDiv);
+            basketDiv.appendChild(checkOutBtn);
+            basketBody.appendChild(basketDiv);
+        }
+    });
+}
+function changeImg() {
+    //Grabbing the different elements just for readability
+    let imgs = document.querySelectorAll(".productThumb");
+    let bigImg = document.getElementById("product");
+    for(let i = 0; i < imgs.length; i++){
+        const img = imgs[i];
+        img.addEventListener("click", function(e) {
+            let offset = i + 1;
+            let bigImgPath = "./images/image-product-" + offset + ".jpg";
+            console.log(bigImgPath);
+            bigImg.src = bigImgPath;
+        });
+    }
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"JacNc":[function(require,module,exports) {
@@ -610,43 +633,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"7BchB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "hamburger", ()=>hamburger
-);
-parcelHelpers.export(exports, "changeImg", ()=>changeImg
-);
-function hamburger() {
-    const menuBtn = document.getElementById('menu-btn');
-    const menuBar = document.getElementById('menu-bar');
-    const closeBtn = document.getElementById('close-menu');
-    // show the menu bar 
-    menuBtn.addEventListener('click', ()=>{
-        menuBar.classList.add('show');
-        document.body.classList.add('dark');
-    });
-    // close the menu bar
-    closeBtn.addEventListener('click', ()=>{
-        menuBar.classList.remove('show');
-        document.body.classList.remove('dark');
-    });
-}
-function changeImg() {
-    //Grabbing the different elements just for readability
-    let imgs = document.querySelectorAll(".productThumb");
-    let bigImg = document.getElementById("product");
-    for(let i = 0; i < imgs.length; i++){
-        const img = imgs[i];
-        img.addEventListener("click", function(e) {
-            let offset = i + 1;
-            let bigImgPath = "./images/image-product-" + offset + ".jpg";
-            console.log(bigImgPath);
-            bigImg.src = bigImgPath;
-        });
-    }
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}]},["8Ye98","6cF5V"], "6cF5V", "parcelRequire5b66")
+},{}]},["8Ye98","6cF5V"], "6cF5V", "parcelRequire5b66")
 
 //# sourceMappingURL=index.5cb7de60.js.map

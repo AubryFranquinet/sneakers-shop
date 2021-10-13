@@ -108,7 +108,6 @@
  }
  /* -----------------------------------
 Header style
-
 -------------------------------------*/
  
  header {
@@ -192,7 +191,6 @@ Header style
      left: 5%;
  }
  
- 
  #account-icon {
      position: relative;
      cursor: pointer;
@@ -200,10 +198,7 @@ Header style
      height: 30px;
      top: -5.5rem;
      left: 47%;
-
-    }
- 
-
+ }
  
  .header-top {
      position: relative;
@@ -226,13 +221,13 @@ Header style
  
  #add-to-cart {
      position: relative;
-     left: 10%;
      top: 2rem;
      width: 300px;
      height: 60px;
      border-radius: 10px;
      margin-bottom: 5rem;
      background-color: #FF7F18;
+     left: 2rem;
  }
  
  #add-to-cart span {
@@ -276,9 +271,8 @@ Header style
      position: relative;
      left: 2rem;
  }
-
-
- .shopping-sec{
+ 
+ .shopping-sec {
      position: relative;
      top: -5rem;
      left: 45%;

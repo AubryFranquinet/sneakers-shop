@@ -1,7 +1,6 @@
 {
   "name": "todo-list",
   "version": "1.0.0",
-<<<<<<< HEAD
   "dependencies": {
     "abab": "^2.0.5",
     "abortcontroller-polyfill": "^1.7.3",
@@ -538,14 +537,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AubryFranquinet/sneakers-shop.git"
-=======
-  "description": "",
-  "source": "src/index.html",
- 
-  "scripts": {
-    "start": "parcel",
-    "build" : "rm -rf dist/. && cp /src/images/ /dist/images/ -R && parcel build"
->>>>>>> azad
   },
   "keywords": [],
   "author": "",

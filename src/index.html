@@ -6,25 +6,52 @@
     <!-- displays site properly based on user's device -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
     <header>
-        <div class="header-top">
-            <img id="menu-btn" src="./images/menu--v1.png" />
-            <h1 id="navbarTitle"><img src="./images/logo.svg" alt=""></h1>
-            <img id="shopping-icon" src="./images/avatar.png"/>
-            <img id="account-icon" src="./images/img1.jpg"/>
-        </div>
+        <h1><img src="./images/logo.svg" alt=""></h1>
+
         <ul id="menu-bar">
             <button id="close-menu">X</button>
-            <li><a href="#" data-filter="All">Collection</a></li>
+            <li ><a href="#" data-filter="All">Collection</a></li>
             <li> <a href="#" data-filter="men">Men</a></li>
             <li><a href="#" data-filter="women">Women</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </header>
+            
+            
+        </ul>
+        <div class="header-top">
+            <img id="menu-btn" src="./images/icon-menu.svg" >
+            <div class="shopping-sec">
+                <img id="shopping-icon" src="./images/icon-cart.svg"/>
+                <span id="articel-number">3</span>
+                <article id="shop-basket" class="hide">
+                    
+                    <div id="atc-in-basket">
+                        <h3 id="basket-title">Cart</h3>
+                        <hr>
+                        <div id="basket-body">
+                            <span class="empty">Your cart is empty</span>    
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <img id="account-icon" src="./images/avatar.png"/>
+        </div>
+        
+       
+  
+   <!-- <img name="slide" src="" alt=""> -->    
+          
+    </header>
+
+
     <main>
 
         <img src="./images/image-product-1.jpg" alt="product" id="product">
@@ -51,7 +78,7 @@
 
         <div class="conrtorls">
             <div class="calc"> <button id="decrese">-</button> <input id="qte" type="text" value="0"><button id="incress">+</button> </div>
-            <button id="add-to-cart"><img src="./../images/icon-cart.svg" alt=""> <span>Add to cart <span></span></button>
+            <button id="add-to-cart"><img src="./images/icon-cart.svg" alt=""> <span>Add to cart <span></span></button>
             <p id="qte-null" class="qte-null " >Please choose the quantity of your shoes !  <span id="ok">OK</span></p>
         </div>
 
@@ -59,4 +86,6 @@
     
     <script src="./index.js" type="module"></script>
 </body>
+
+
 </html>

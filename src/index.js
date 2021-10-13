@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import {hamburger} from "./slide";
-hamburger();
-=======
 import { ShowMenu } from "./function";
 import { IncreAndDecrse } from "./function";
 import { deleteItem } from "./function";
@@ -18,19 +14,15 @@ const modelName = document.getElementById('modelName')
 const qteNull = document.getElementById('qte-null');
 
 
->>>>>>> azad
 
 shoppingIcon.addEventListener('click', ()=>{
     basket.classList.toggle('show')
 })
 
-<<<<<<< HEAD
 import { changeImg } from "./slide";
 changeImg();
-/*
-=======
+
 ShowMenu()
->>>>>>> azad
 
 IncreAndDecrse();
 

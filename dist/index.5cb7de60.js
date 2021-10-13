@@ -455,84 +455,8 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"6cF5V":[function(require,module,exports) {
-<<<<<<< HEAD
-var _slide = require("./slide");
-_slide.hamburger();
-_slide.changeImg(); /*
-
-let images  =[ './../images/product-1.jpg', './../images/product-2.jpg', './../images/product-3.jpg',];
-let i = 0;
-let time = 2000;
-
-
-function changeImg(){
-document.slide.src =images[i];
-
-    if(i<images.length-1){
-      i ++;
-    }
-    else{
-     i =0;
-    }
-    setTimeout("changeImg()", time)
-    }
-    window.onload = changeImg();
-
-
-
-
-
-/*
-
-let images = [
-    {
-        name:"one",
-        img: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/jvcf7clhvzyavyopsi9n/revolution-5-running-shoe-7TKVTL.png"
-    },
-    {
-        name:"one",
-        img: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/e125b578-4173-401a-ab13-f066979c8848/air-force-1-older-shoes-xjblV7.png"
-    },
-    {
-        name:"one",
-        img: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fb7eda3c-5ac8-4d05-a18f-1c2c5e82e36e/blazer-mid-77-vintage-shoe-Q6SCp0.png"
-    }
-]
-
-
-
-let myImg =['product-1.png', 'product-2.png', 'product-3.png'];
-let i =0;
-let time = 200;
-
-
-
-
-
-
-
-/*
-for(let i = 0; i<images.length; i++){
-
-    let allimage = document.createElement('img');
-    allimage.setAttribute('src', images[i].img);
-    newmain.appendChild(allimage)
-}
-*/ 
-
-},{"./slide":"7BchB"}],"7BchB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "hamburger", ()=>hamburger
-);
-parcelHelpers.export(exports, "changeImg", ()=>changeImg
-);
-function hamburger() {
-    const menuBtn = document.getElementById('menu-btn');
-    const menuBar = document.getElementById('menu-bar');
-    const closeBtn = document.getElementById('close-menu');
-=======
 var _function = require("./function");
+var _slide = require("./slide");
 const shoppingIcon = document.getElementById('shopping-icon');
 const basket = document.getElementById('shop-basket');
 const addToCart = document.getElementById('add-to-cart');
@@ -545,6 +469,7 @@ const qteNull = document.getElementById('qte-null');
 shoppingIcon.addEventListener('click', ()=>{
     basket.classList.toggle('show');
 });
+_slide.changeImg();
 _function.ShowMenu();
 _function.IncreAndDecrse();
 // add article to shoping basket
@@ -589,51 +514,28 @@ function addArticleInCart() {
 addArticleInCart();
 _function.removeAlert();
 
-},{"./function":"1J74e"}],"1J74e":[function(require,module,exports) {
+},{"./slide":"7BchB","./function":"1J74e"}],"7BchB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ShowMenu", ()=>ShowMenu
+parcelHelpers.export(exports, "hamburger", ()=>hamburger
 );
-// -------------------------------------------
-// Incresse and decrese the the qte of shose
-//--------------------------------------------
-parcelHelpers.export(exports, "IncreAndDecrse", ()=>IncreAndDecrse
+parcelHelpers.export(exports, "changeImg", ()=>changeImg
 );
-// Delete the item add in basket
-//--------------------------
-parcelHelpers.export(exports, "deleteItem", ()=>deleteItem
-);
-//Remove aler for Zero qtes
-parcelHelpers.export(exports, "removeAlert", ()=>removeAlert
-);
-const menuBtn = document.getElementById('menu-btn');
-const menuBar = document.getElementById('menu-bar');
-const closeBtn = document.getElementById('close-menu');
-const incress = document.getElementById('incress');
-const decress = document.getElementById('decrese');
-const qteNull = document.getElementById('qte-null');
-const ok = document.getElementById('ok');
-function ShowMenu() {
-    hideMenu();
->>>>>>> azad
+function hamburger() {
+    const menuBtn = document.getElementById('menu-btn');
+    const menuBar = document.getElementById('menu-bar');
+    const closeBtn = document.getElementById('close-menu');
     // show the menu bar 
     menuBtn.addEventListener('click', ()=>{
         menuBar.classList.add('show');
         document.body.classList.add('dark');
     });
-<<<<<<< HEAD
-=======
-}
-ShowMenu();
-function hideMenu() {
->>>>>>> azad
     // close the menu bar
     closeBtn.addEventListener('click', ()=>{
         menuBar.classList.remove('show');
         document.body.classList.remove('dark');
     });
 }
-<<<<<<< HEAD
 function changeImg() {
     //Grabbing the different elements just for readability
     let imgs = document.querySelectorAll(".productThumb");
@@ -647,30 +549,6 @@ function changeImg() {
             bigImg.src = bigImgPath;
         });
     }
-=======
-function IncreAndDecrse() {
-    let i = 0;
-    decress.addEventListener('click', ()=>{
-        if (i > 0) {
-            i--;
-            document.getElementById('qte').value = i;
-        } else document.getElementById('qte').value = 0;
-    });
-    incress.addEventListener('click', ()=>{
-        i++;
-        document.getElementById('qte').value = i;
-    });
-}
-function deleteItem(icon) {
-    icon.addEventListener('click', ()=>{
-        icon.parentElement.parentElement.remove();
-    });
-}
-function removeAlert() {
-    ok.addEventListener('click', ()=>{
-        qteNull.classList.remove('on');
-    });
->>>>>>> azad
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"JacNc":[function(require,module,exports) {
@@ -705,6 +583,70 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["8Ye98","6cF5V"], "6cF5V", "parcelRequire5b66")
+},{}],"1J74e":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ShowMenu", ()=>ShowMenu
+);
+// -------------------------------------------
+// Incresse and decrese the the qte of shose
+//--------------------------------------------
+parcelHelpers.export(exports, "IncreAndDecrse", ()=>IncreAndDecrse
+);
+// Delete the item add in basket
+//--------------------------
+parcelHelpers.export(exports, "deleteItem", ()=>deleteItem
+);
+//Remove aler for Zero qtes
+parcelHelpers.export(exports, "removeAlert", ()=>removeAlert
+);
+const menuBtn = document.getElementById('menu-btn');
+const menuBar = document.getElementById('menu-bar');
+const closeBtn = document.getElementById('close-menu');
+const incress = document.getElementById('incress');
+const decress = document.getElementById('decrese');
+const qteNull = document.getElementById('qte-null');
+const ok = document.getElementById('ok');
+function ShowMenu() {
+    hideMenu();
+    // show the menu bar 
+    menuBtn.addEventListener('click', ()=>{
+        menuBar.classList.add('show');
+        document.body.classList.add('dark');
+    });
+}
+ShowMenu();
+function hideMenu() {
+    // close the menu bar
+    closeBtn.addEventListener('click', ()=>{
+        menuBar.classList.remove('show');
+        document.body.classList.remove('dark');
+    });
+}
+function IncreAndDecrse() {
+    let i = 0;
+    decress.addEventListener('click', ()=>{
+        if (i > 0) {
+            i--;
+            document.getElementById('qte').value = i;
+        } else document.getElementById('qte').value = 0;
+    });
+    incress.addEventListener('click', ()=>{
+        i++;
+        document.getElementById('qte').value = i;
+    });
+}
+function deleteItem(icon) {
+    icon.addEventListener('click', ()=>{
+        icon.parentElement.parentElement.remove();
+    });
+}
+function removeAlert() {
+    ok.addEventListener('click', ()=>{
+        qteNull.classList.remove('on');
+    });
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}]},["8Ye98","6cF5V"], "6cF5V", "parcelRequire5b66")
 
 //# sourceMappingURL=index.5cb7de60.js.map

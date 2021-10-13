@@ -15,7 +15,7 @@
      max-width: 90%;
      height: 100vh;
      font-size: 16px;
-     overflow: hidden;
+     overflow-x: hidden;
  }
  
  main {
@@ -194,18 +194,15 @@ Header style
      left: 5%;
  }
  
- #shopping-icon,
  #account-icon {
      position: relative;
-     left: 20%;
      cursor: pointer;
      width: 30px;
      height: 30px;
- }
- 
- #account-icon {
-     left: 1px;
- }
+     top: -5.5rem;
+     left: 47%;
+
+    }
  
  .header-top {
      position: relative;
@@ -278,6 +275,12 @@ Header style
      padding: 5px;
      position: relative;
      left: 2rem;
+ }
+ 
+ .shopping-sec{
+     position: relative;
+     top: -5rem;
+     left: 45%;
  }
  
  /*----------------------------------------------------

@@ -514,76 +514,7 @@ function addArticleInCart() {
 addArticleInCart();
 _function.removeAlert();
 
-},{"./slide":"7BchB","./function":"1J74e"}],"7BchB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "hamburger", ()=>hamburger
-);
-parcelHelpers.export(exports, "changeImg", ()=>changeImg
-);
-function hamburger() {
-    const menuBtn = document.getElementById('menu-btn');
-    const menuBar = document.getElementById('menu-bar');
-    const closeBtn = document.getElementById('close-menu');
-    // show the menu bar 
-    menuBtn.addEventListener('click', ()=>{
-        menuBar.classList.add('show');
-        document.body.classList.add('dark');
-    });
-    // close the menu bar
-    closeBtn.addEventListener('click', ()=>{
-        menuBar.classList.remove('show');
-        document.body.classList.remove('dark');
-    });
-}
-function changeImg() {
-    //Grabbing the different elements just for readability
-    let imgs = document.querySelectorAll(".productThumb");
-    let bigImg = document.getElementById("product");
-    for(let i = 0; i < imgs.length; i++){
-        const img = imgs[i];
-        img.addEventListener("click", function(e) {
-            let offset = i + 1;
-            let bigImgPath = "./images/image-product-" + offset + ".jpg";
-            console.log(bigImgPath);
-            bigImg.src = bigImgPath;
-        });
-    }
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"JacNc":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule') return;
-        // Skip duplicate re-exports when they have the same value.
-        if (key in dest && dest[key] === source[key]) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"1J74e":[function(require,module,exports) {
+},{"./function":"1J74e","./slide":"7BchB"}],"1J74e":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ShowMenu", ()=>ShowMenu
@@ -645,6 +576,75 @@ function removeAlert() {
     ok.addEventListener('click', ()=>{
         qteNull.classList.remove('on');
     });
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"JacNc":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule') return;
+        // Skip duplicate re-exports when they have the same value.
+        if (key in dest && dest[key] === source[key]) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"7BchB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "hamburger", ()=>hamburger
+);
+parcelHelpers.export(exports, "changeImg", ()=>changeImg
+);
+function hamburger() {
+    const menuBtn = document.getElementById('menu-btn');
+    const menuBar = document.getElementById('menu-bar');
+    const closeBtn = document.getElementById('close-menu');
+    // show the menu bar 
+    menuBtn.addEventListener('click', ()=>{
+        menuBar.classList.add('show');
+        document.body.classList.add('dark');
+    });
+    // close the menu bar
+    closeBtn.addEventListener('click', ()=>{
+        menuBar.classList.remove('show');
+        document.body.classList.remove('dark');
+    });
+}
+function changeImg() {
+    //Grabbing the different elements just for readability
+    let imgs = document.querySelectorAll(".productThumb");
+    let bigImg = document.getElementById("product");
+    for(let i = 0; i < imgs.length; i++){
+        const img = imgs[i];
+        img.addEventListener("click", function(e) {
+            let offset = i + 1;
+            let bigImgPath = "./images/image-product-" + offset + ".jpg";
+            console.log(bigImgPath);
+            bigImg.src = bigImgPath;
+        });
+    }
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}]},["8Ye98","6cF5V"], "6cF5V", "parcelRequire5b66")

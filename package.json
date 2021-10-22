@@ -5,7 +5,8 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": [
     "last 1 Chrome versions"
@@ -15,7 +16,9 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-image": "^2.0.0-rc.0",
+    "gh-pages": "^3.2.3",
     "parcel": "^2.0.0-rc.0",
-    "parcel-bundler": "^1.12.5"
-  }
+    "parcel-bundler": "^1.9.4"
+  },
+  "homepage": "https://aubryfranquinet.github.io/sneakers-shop/"
 }

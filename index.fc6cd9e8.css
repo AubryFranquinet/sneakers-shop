@@ -1,0 +1,138 @@
+
+@media screen and (min-width: 580px){
+    body{
+        width: 580px;
+        max-height: 580px;
+    }
+    header{
+        width: 100%;
+     
+    }
+    #shopping-icon, #account-icon{
+        left: 40%;
+    }
+    .shopping-sec{
+        position: relative;
+        left: 40%;
+    }
+    #articel-number{
+        left: rem;
+    }
+    .qte-null{
+        top: 40%;
+        left: 30%;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    body{
+        width: 768px;
+        max-height: 760px;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+     
+    }
+    #menu-bar {
+        transform: translateX(0);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+      
+    }
+    #menu-bar li{
+        margin-top: 1rem;
+        margin-left: 0rem;
+        opacity: 0.7;
+    }
+    #header-top{
+        display: flex;
+        flex-direction: row;
+    }
+    #close-menu{
+        display: none;
+    }
+    #menu-btn{
+        display: none;
+    }
+    #shopping-icon{
+        position: absolute;
+        transform: scale(1.5);
+    }
+    #account-icon{
+        margin-left: 14rem;
+        transform: scale(1.5);
+    }
+  
+    .shopping-sec{
+        position: relative;
+        left: 64%;
+    }
+    #articel-number{
+        left: 0.9rem;
+
+        
+    }
+}
+
+
+@media screen and (min-width: 1150px){
+    body{
+        width: 1150px;
+        max-height: 1150px;
+    }
+    header{
+        width: 100%;
+     
+    }
+    #shopping-icon, #account-icon{
+        left: 70%;
+        transform: scale(2);
+    }
+    .shopping-sec{
+        position: relative;
+        left: 65%;
+    }
+    #articel-number{
+        left: 0.9rem;
+    }
+  
+    #account-icon{
+        margin-left: 2rem;
+    }
+    .qte-null{
+        top: 30%;
+        left: 40%;
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+    body{
+        width: 1440px;
+        max-height: 1440px;
+    }
+    header{
+        width: 100%;
+     
+    }
+    #shopping-icon, #account-icon{
+        left: 72%;
+        transform: scale(2);
+    }
+    .shopping-sec{
+        position: relative;
+        left: 70%;
+    }
+    #articel-number{
+        left: 1.3rem;
+    }
+    #account-icon{
+        margin-left: 2rem;
+    }
+}
+/*# sourceMappingURL=index.fc6cd9e8.css.map */
